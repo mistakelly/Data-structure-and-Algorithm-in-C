@@ -1,0 +1,32 @@
+CONCEPTS TO COVER IN LINKED LISTS.
+
+
+## INTRODUCTION TO LINKED LISTS
+what is Linked Lists.
+what is NODE
+Node structure
+creating a NODE
+accessing a NODE
+
+* a Linked Lists is a collection of NODE where each Node has a data and a link to the next node.
+
+basic structure of a Linked List:
+
+struct Node
+{
+    int data;
+    struct Node *next;
+    /*if you notice you see it is having the structure is having a
+    pointer of its own type so they are called self Refrencial structure*/
+}
+
+## little intro on how linked list are created
+
+when we want to create a linked list we have to request memory/space for the heap for nodes or the list to be created,when we request for memory the base address of the memory is returned and then we use a pointer variable which is created in the stack to point to the base adress of the node memory address that way we can be able to access, insert elements in that memory address.
+
+
+*creating a Node.
+
+struct Node *ptr;
+ptr = (struct Node *)malloc(sizeof(struct Node));
+
