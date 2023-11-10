@@ -1,67 +1,71 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*define struct*/
 struct			Node
 {
+	/* data */
 	int			data;
 	struct Node	*next;
 };
 
-// function to insert
+/*define function to insert*/
 
-struct Node	*insert_begin(struct Node *head, int data)
+void	insert_begin(int elem, struct Node **head)
 {
 	struct Node	*new_node;
 
 	new_node = (struct Node *)malloc(sizeof(struct Node));
 	if (new_node == NULL)
 	{
+		printf("oh sorry! memmory allocation failed!\n");
 		perror("malloc");
+		free(new_node);
 		exit(1);
 	}
-	new_node->data = data;
-	if (head != NULL)
-	{
-		new_node->next = head;
-	}
-	head = new_node;
-	return (head);
+	new_node->data = elem;
+	new_node->next = *head; /*set new node next to previous node adress*/
+	*head = new_node; /*updat head pointer to point to new node*/
 }
 
-void	print_node(struct Node *head)
+/*define a function to print*/
+
+void	display(struct Node *node)
 {
 	struct Node	*temp;
 
-	temp = head;
-	printf("head ");
+	temp = node;
+	printf("Head ");
 	while (temp != NULL)
 	{
 		printf("->[%d] ", temp->data);
 		temp = temp->next;
 	}
-	printf("\n");
+    printf("\n");
 }
+
+/**/
+
+/*Driver code*/
 
 int	main(void)
 {
 	struct Node *head;
 	head = NULL;
 
-	int i, n, elem;
+	int i, no_elem, elem;
 
-	printf("how many elements do you want to link? ");
-	scanf("%d", &n);
+	printf("How many elements you want to link? ");
+	scanf("%d", &no_elem);
 
-	for (i = 0; i < n; i++)
+	for (i = 0; i < no_elem; i++)
 	{
 		/* code */
 
-		printf("Enter Element [%d]: ", i + 1);
+		printf("Enter Element [%d] ", i + 1);
 		scanf("%d", &elem);
 
-		head = insert_begin(head, elem);
-		print_node(head);
+		insert_begin(elem, &head);
+		display(head);
 	}
-
-	return (0);
 }

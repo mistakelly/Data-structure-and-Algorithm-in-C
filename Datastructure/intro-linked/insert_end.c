@@ -1,67 +1,88 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*define struct*/
 struct			Node
 {
 	int			data;
 	struct Node	*next;
 };
-/**function to insert at the end of the list*/
-void	insert_end(int elem, struct Node **head)
-/*pass the header pointer by reference*/
+
+/*define function to insert at the end of the list*/
+
+void	insert_end(int data, struct Node **head)
 {
-	struct Node *temp;
-	struct Node *new_node;
+	struct Node	*new_node;
+	struct Node	*temp;
 
 	new_node = (struct Node *)malloc(sizeof(struct Node));
-	new_node->data = elem; /**set the new_node to data*/
-	if (*head == NULL)
+	if (new_node == NULL)
 	{
-		*head = new_node; /*point head to new_node*/
+		printf("oh sorry! memmory allocation failed!\n");
+		perror("malloc");
+		free(new_node);
+		// exit(1);
 	}
+	new_node->data = data;
+	new_node->next = NULL;
+	/*check if head is == NULL then set head to point to new node*/
+	if (*head == NULL)
+		*head = new_node;
 	else
 	{
-		temp = *head; /*point temp to head*/
+		temp = *head;
 		while (temp->next != NULL)
-		{
-			/* code */
-			temp = temp->next; /*move temp to next node*/
-		}
-		temp->next = new_node; /*link the new node to the end of the list*/
+			temp = temp->next;
+		temp->next = new_node;
 	}
 }
 
-void	print(struct Node *head)
+/*define a function to print*/
+
+void	display(struct Node *node)
 {
 	struct Node	*temp;
 
-	temp = head;
+	temp = node;
 	printf("Head ");
 	while (temp != NULL)
 	{
-		printf("->[%d]", temp->data);
+		printf("->[%d] ", temp->data);
 		temp = temp->next;
 	}
 	printf("\n");
 }
 
+/*Driver code*/
+
 int	main(void)
 {
-	struct Node	*head;
-
+	struct Node *head;
 	head = NULL;
+
 	int i, no_elem, elem;
-	printf("How many element you want to insert? ");
+
+	printf("How many elements you want to link? ");
 	scanf("%d", &no_elem);
+
 	for (i = 0; i < no_elem; i++)
 	{
 		/* code */
-		printf("Enter Element [%d]: ", i + 1);
+
+		printf("Enter Element [%d] ", i + 1);
 		scanf("%d", &elem);
-		/*function calls*/
+
 		insert_end(elem, &head);
-		print(head);
+		display(head);
 	}
-	return (0);
+
+    struct Node* temp = head;
+
+    while(temp !=NULL)
+    {
+        temp = temp->next;
+        free(temp);
+    }
+
+
 }
+
