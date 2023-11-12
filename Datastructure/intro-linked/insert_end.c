@@ -38,11 +38,11 @@ void	insert_end(int data, struct Node **head)
 
 /*define a function to print*/
 
-void	display(struct Node *node)
+void	display(struct Node *head)
 {
 	struct Node	*temp;
 
-	temp = node;
+	temp = head;
 	printf("Head ");
 	while (temp != NULL)
 	{
@@ -52,37 +52,37 @@ void	display(struct Node *node)
 	printf("\n");
 }
 
+/*function to free Nodes*/
+void	free_list(struct Node *head)
+{
+	struct Node	*temp;
+
+	temp = head;
+	while (head != NULL)
+	{
+		head = temp->next;
+		free(temp);
+		temp = head;
+	}
+}
 /*Driver code*/
 
 int	main(void)
 {
-	struct Node *head;
+	struct Node	*head;
+
 	head = NULL;
-
 	int i, no_elem, elem;
-
 	printf("How many elements you want to link? ");
 	scanf("%d", &no_elem);
-
 	for (i = 0; i < no_elem; i++)
 	{
 		/* code */
-
 		printf("Enter Element [%d] ", i + 1);
 		scanf("%d", &elem);
-
 		insert_end(elem, &head);
 		display(head);
 	}
-
-    struct Node* temp = head;
-
-    while(temp !=NULL)
-    {
-        temp = temp->next;
-        free(temp);
-    }
-
-
+	/*free the allocated Nodes Memory*/
+	free_list(head);
 }
-
