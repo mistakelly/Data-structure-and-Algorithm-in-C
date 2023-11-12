@@ -19,6 +19,28 @@ int	listSize(struct Node *head)
 	}
 	return (size);
 }
+void	reverse_link(struct Node **head)
+{
+	struct Node *current, *prev, *next;
+	/*set prev to NULL*/
+	prev = NULL;
+	current = *head;
+	while (current != NULL)
+	{
+		/*set next pointer to have the address of the next node using current
+			->next*/
+		next = current->next;
+		/*set current->next to point the address of the previous Node*/
+		current->next = prev;
+		/*update prev to have the addresss of the current Node*/
+		prev = current;
+		/*update current to have the addresss of the current Node using next pointer*/
+		current = next;
+	}
+	/*updat head to have the address of the last Node*/
+	*head = prev;
+}
+
 void	pop_nth(int pos, struct Node **head)
 {
 	int			size;
@@ -86,26 +108,19 @@ int	main(void)
 	node4 = (struct Node *)malloc(sizeof(struct Node));
 	/*link head to the first node*/
 	head = node1;
-
 	/*assinging elements and links in nodes*/
 	node1->data = 5;
-
 	node1->next = node2;
 	node2->data = 10;
-
 	node2->next = node3;
 	node3->data = 15;
-
-	// printf("address of node 3 [%p]\n", node3->data);
 	node3->next = node4;
 	node4->data = 20;
 	node4->next = NULL;
-
 	/*function calls*/
 	print_node(head);
-	pop_nth(0, &head); /*function to delete Node*/
+	reverse_link(&head);
 	print_node(head);
-    printf("address of head [%p]\n", head);
-
-    return 0;
+	// pop_nth(0, &head); /*function to delete Node*/
+	return (0);
 }
