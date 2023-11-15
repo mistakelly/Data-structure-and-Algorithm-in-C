@@ -30,3 +30,5 @@ when we want to create a linked list we have to request memory/space for the hea
 struct Node *ptr;
 ptr = (struct Node *)malloc(sizeof(struct Node));
 
+
+formular for the computer uses to print elements in an array is address of the first element + index  * sizeof datatype
