@@ -7,57 +7,20 @@ struct			Node
 	struct Node	*next;
 };
 
-int	link_size(struct Node *head)
+void	insert_begin(int pos, int data, struct Node **head)
 {
-	int			size;
-	struct Node	*temp;
-
-	size = 0;
-	temp = head;
-	while (temp != NULL)
-	{
-		/* code */
-		temp = temp->next;
-		size++;
-	}
-	return (size);
-}
-
-void	insert_nth(int pos, int data, struct Node **head)
-{
-	int			size;
 	struct Node	*temp;
 	struct Node	*element;
 
-	size = link_size(*head);
 	element = (struct Node *)malloc(sizeof(struct Node));
 	element->data = data;
-	temp = *head;
-	/*check if position is greater than size or position less than zero*/
-	if (pos > size || pos < 0)
+	if (pos != 0)
 	{
-		printf("Invalid Position\n");
-		// exit(0);
-		return ;
+		printf("Only at the begining of the Node is accepted\n");
+		exit(0);
 	}
-	if (pos == 0)
-	{
-		element->next = *head;
-		*head = element;
-		// return ;
-	}
-	else
-	{
-		while (pos != 1)
-		{
-			temp = temp->next;
-			pos--;
-		}
-		element->next = temp->next;
-		temp->next = element;
-	}
-	// printf("size of the node [%d]", size);
-	/**condition to set the temp -> next to the next node*/
+	element->next = *head;
+	*head = element;
 }
 
 void	array_to_linked_list(struct Node **head, int *arr, int size)
@@ -101,12 +64,12 @@ void	display(struct Node *node)
 int	main(void)
 {
 	struct Node	*head;
-	int			arr[] = {20, 40};
+	int			arr[] = {1, 2, 3, 4, 5};
 	int			size;
 
 	size = sizeof(arr) / sizeof(arr[0]);
 	array_to_linked_list(&head, arr, size);
 	display(head);
-	insert_nth(4, 100, &head);
+	insert_begin(0, 30, &head);
 	display(head);
 }

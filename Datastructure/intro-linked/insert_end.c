@@ -7,82 +7,72 @@ struct			Node
 	struct Node	*next;
 };
 
-/*define function to insert at the end of the list*/
-
 void	insert_end(int data, struct Node **head)
 {
-	struct Node	*new_node;
 	struct Node	*temp;
+	struct Node	*element;
 
-	new_node = (struct Node *)malloc(sizeof(struct Node));
-	if (new_node == NULL)
+	element = (struct Node *)malloc(sizeof(struct Node));
+	element->data = data;
+	element->next = NULL;
+	temp = *head;
+	/**condition to set the temp -> next to the next node*/
+	while (temp->next != NULL)
 	{
-		printf("oh sorry! memmory allocation failed!\n");
-		perror("malloc");
-		free(new_node);
-		// exit(1);
+		temp = temp->next;
 	}
-	new_node->data = data;
-	new_node->next = NULL;
-	/*check if head is == NULL then set head to point to new node*/
-	if (*head == NULL)
-		*head = new_node;
-	else
+	temp->next = element;
+}
+
+void	array_to_linked_list(struct Node **head, int *arr, int size)
+{
+	int	i;
+
+	struct Node *current, *element;
+	if (size == 0)
 	{
-		temp = *head;
-		while (temp->next != NULL)
-			temp = temp->next;
-		temp->next = new_node;
+		*head = NULL;
+		return ;
+	}
+	element = (struct Node *)malloc(sizeof(struct Node));
+	element->data = arr[0];
+	element->next = NULL;
+	*head = element;
+	i = 0;
+	current = *head;
+	for (i = 1; i < size; i++)
+	{
+		/* code */
+		current->next = (struct Node *)malloc(sizeof(struct Node));
+		current = current->next;
+		current->data = arr[i];
+		current->next = NULL;
 	}
 }
 
-/*define a function to print*/
-
-void	display(struct Node *head)
+void	display(struct Node *node)
 {
-	struct Node	*temp;
-
-	temp = head;
+	// as linked list will end when Node is Null
 	printf("Head ");
-	while (temp != NULL)
+	while (node != NULL)
 	{
-		printf("->[%d] ", temp->data);
-		temp = temp->next;
+		printf("-> [%d] ", node->data);
+		node = node->next;
 	}
 	printf("\n");
 }
 
-/*function to free Nodes*/
-void	free_list(struct Node *head)
-{
-	struct Node	*temp;
-
-	temp = head;
-	while (head != NULL)
-	{
-		head = temp->next;
-		free(temp);
-		temp = head;
-	}
-}
-/*Driver code*/
-
 int	main(void)
 {
 	struct Node	*head;
+	int			arr[] = {20,40};
+	int			size;
 
-	head = NULL;
-	int i, no_elem, elem;
-	printf("How many elements you want to link? ");
-	scanf("%d", &no_elem);
-	for (i = 0; i < no_elem; i++)
-	{
-		/* code */
-		printf("Enter Element [%d] ", i + 1);
-		scanf("%d", &elem);
-		insert_end(elem, &head);
-		display(head);
-	}
-	/*free the allocated Nodes Memory*/
-	free_list(head);
+	size = sizeof(arr) / sizeof(arr[0]);
+	array_to_linked_list(&head, arr, size);
+	display(head);
+	insert_end(60, &head);
+	insert_end(80, &head);
+	insert_end(100, &head);
+	display(head);
 }

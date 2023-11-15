@@ -7,16 +7,15 @@ struct			Node
 	struct Node	*next;
 };
 
-void	pop_begin(int pos, struct Node **head)
+void	sum_list(struct Node **head, int *sum) /*passing the sum by reference*/
 {
-	struct Node	*temp;
+	struct Node *temp;
 
 	temp = *head;
-	if (pos == 0)
+	while (temp != NULL)
 	{
-		*head = temp->next;
-		free(temp);
-		return ;
+		*sum += temp->data;
+		temp = temp->next;
 	}
 }
 
@@ -60,12 +59,20 @@ void	display(struct Node *node)
 int	main(void)
 {
 	struct Node	*head;
-	int			arr[] = {1, 2, 3, 4, 5};
+	int			arr[] = {1,2};
 	int			size;
+	int			sum;
 
+	sum = 0;
 	size = sizeof(arr) / sizeof(arr[0]);
 	array_to_linked_list(&head, arr, size);
+	if (size == 0)
+	{
+		printf("No element in the list\n");
+		return 0;
+	}
+	sum_list(&head, &sum);
 	display(head);
-	pop_begin(0, &head);
-	display(head);
+	printf("sum of the list is [%d]\n", sum);
+	return (0);
 }
