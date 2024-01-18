@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	
+	newnode
 	/*creation of node*/
 
 }
