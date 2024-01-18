@@ -3,4 +3,4 @@
 #include <stdlib.h>
 
 
-int main(int argc, )
+int main(int argc, char *argv)
