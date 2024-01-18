@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	newnode->data = 40;
 	newnode->next  = NULL;
 
-	printf("")
+	printf("{%d}")
 	/*creation of node*/
 
 }
