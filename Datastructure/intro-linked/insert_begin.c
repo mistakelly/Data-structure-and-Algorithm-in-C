@@ -40,8 +40,6 @@ int main(int argc, char *argv[])
 		temp = temp->next;
 	}
 
-	printf("{%d} -> {%d}\n", newnode->data, newnode2->data);
-
 	free(newnode);
 
 	return 0;
