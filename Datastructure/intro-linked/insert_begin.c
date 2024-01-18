@@ -5,7 +5,7 @@
 /**
  * @brief: main function
  * its the driver function of the program
- * 
+ * param:
  */
 
 /*Driver code*/
