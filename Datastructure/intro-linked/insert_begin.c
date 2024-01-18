@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	}
 
 	newnode->data = 40
-	newnode
+	newnode-next  = NULL
 	/*creation of node*/
 
 }
