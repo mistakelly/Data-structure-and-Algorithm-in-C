@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 
 	struct Node *newnode = (struct Node *)malloc(sizeof(struct Node));
 
-	if newnode ==
+	if (newnode == )
 	/*creation of node*/
 
 }
