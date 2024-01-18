@@ -2,7 +2,10 @@
 #include <string.h>
 #include <stdlib.h>
 
-struct Node
+struct node
+{
+	
+}
 
 /**
  * @brief: main function
