@@ -24,6 +24,8 @@ int main(int argc, char *argv[])
 		printf("malloc failed");
 		exit(1);
 	}
+
+	
 	/*creation of node*/
 
 }
