@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 		printf("->{%d}", temp->data);
 		temp = temp->next;
 	}
-	print
+	printf("\n")
 	free(newnode);
 
 	return 0;
