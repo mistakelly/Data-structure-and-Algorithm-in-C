@@ -44,6 +44,4 @@ int main(int argc, char *argv[])
 	free(newnode2);
 
 	return 0;
-	/*creation of node*/
-
 }
