@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 	newnode->data = 40;
 	newnode->next  = newnode2;
 	newnode2->data = 60;
-	newnode2->
+	newnode2->next = NULL;
 
 	printf("{%d}\n", newnode->data);
 
