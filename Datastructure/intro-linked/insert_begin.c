@@ -36,10 +36,10 @@ int main(int argc, char *argv[])
 	struct Node *temp = head;
 	while(temp)
 	{
-		printf("->{%d}\n", temp->data);
+		printf("->{%d}", temp->data);
 		temp = temp->next;
 	}
-
+	print
 	free(newnode);
 
 	return 0;
