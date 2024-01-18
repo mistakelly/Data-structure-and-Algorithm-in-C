@@ -28,6 +28,7 @@ int main(int argc, char *argv[])
 
 	newnode->data = 40;
 	newnode->next  = newnode2;
+	node
 
 	printf("{%d}\n", newnode->data);
 
