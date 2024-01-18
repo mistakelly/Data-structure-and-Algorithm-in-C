@@ -5,7 +5,7 @@
 /**
  * @brief: main function
  * its the driver function of the program
- * @param: argc 
+ * @param: argc argument count
  */
 
 /*Driver code*/
