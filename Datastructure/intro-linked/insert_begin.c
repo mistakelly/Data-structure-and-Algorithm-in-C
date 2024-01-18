@@ -2,10 +2,11 @@
 #include <string.h>
 #include <stdlib.h>
 
-struct NODE
+struct Node
 {
-
-}
+	int data;
+	struct Node *next;
+};
 
 /**
  * @brief: main function
@@ -15,6 +16,8 @@ struct NODE
  */
 int main(int argc, char *argv[])
 {
+
+	struct Node *newnode = (struct Node *)malloc(sizeof(struct Node))
 	/*creation of node*/
 
 }
