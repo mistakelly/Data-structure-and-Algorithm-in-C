@@ -8,8 +8,6 @@
  * @param: argc argument count
  * @param: argv argument variable
  */
-
-/*Driver code*/
 int main(int argc, char *argv[])
 {
 
