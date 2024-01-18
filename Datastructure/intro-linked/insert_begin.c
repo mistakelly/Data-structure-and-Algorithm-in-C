@@ -4,7 +4,7 @@
 
 /**
  * @brief: main function
- * its the driver 
+ * its the driver function of the program
  * 
  */
 
