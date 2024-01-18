@@ -28,12 +28,12 @@ int main(int argc, char *argv[])
 
 	
 	head->next = newnode;
-	struct Node *temp = head;
 	newnode->data = 40;
 	newnode->next  = newnode2;
 	newnode2->data = 60;
 	newnode2->next = NULL;
 
+	struct Node *temp = head;
 	while(temp)
 	{
 		printf("%d", temp->data);
