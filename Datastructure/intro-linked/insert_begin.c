@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 
 	while(temp)
 	{
-		print("")
+		print("%d")
 	}
 
 	printf("{%d} -> {%d}\n", newnode->data, newnode2->data);
