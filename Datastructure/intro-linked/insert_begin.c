@@ -25,8 +25,8 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	newnode->data = 40
-	newnode->next  = NULL
+	newnode->data = 40;
+	newnode->next  = NULL;
 	/*creation of node*/
 
 }
