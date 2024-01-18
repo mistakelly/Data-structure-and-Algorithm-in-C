@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	}
 
 	
-	head->next = newnode;
+	head = newnode;
 	newnode->data = 40;
 	newnode->next  = newnode2;
 	newnode2->data = 60;
