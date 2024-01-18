@@ -1,1 +1,1 @@
-Everything about LINKED LIST DATASTRUCTURE IS 
+Everything about Linked 
