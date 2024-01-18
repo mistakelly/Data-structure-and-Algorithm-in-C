@@ -41,6 +41,7 @@ int main(int argc, char *argv[])
 	}
 	printf("\n");
 	free(newnode);
+	free(newnode2);
 
 	return 0;
 	/*creation of node*/
