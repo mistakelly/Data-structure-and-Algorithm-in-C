@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 
 	while(temp)
 	{
-		print("%d", temp->data);
+		printf("%d", temp->data);
 		temp = temp->next;
 	}
 
