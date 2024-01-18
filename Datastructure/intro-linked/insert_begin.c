@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * @brief: in
+ * @brief: main fuction
  * 
  */
 
