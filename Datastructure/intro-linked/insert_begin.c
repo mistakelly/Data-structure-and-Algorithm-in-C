@@ -26,7 +26,11 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	stru
+	struct 
+	{
+		/* data */
+	};
+	
 	head->next = newnode;
 	newnode->data = 40;
 	newnode->next  = newnode2;
