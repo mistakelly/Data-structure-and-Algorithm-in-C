@@ -14,7 +14,6 @@ struct			Node
 void	insert_begin(int elem, struct Node **head)
 {
 	struct Node	*new_node;
-
 	new_node = (struct Node *)malloc(sizeof(struct Node));
 	if (new_node == NULL)
 	{
