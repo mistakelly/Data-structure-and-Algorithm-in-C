@@ -1,1 +1,1 @@
-Everything about Linked 
+Everything about Linked list Datastructure is in this folder.
