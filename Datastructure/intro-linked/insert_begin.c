@@ -27,9 +27,6 @@ int main(int argc, char *argv[])
 	}
 
 	struct Node *temp = 
-	{
-		/* data */
-	};
 	
 	head->next = newnode;
 	newnode->data = 40;
