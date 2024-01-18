@@ -30,7 +30,9 @@ int main(int argc, char *argv[])
 
 	printf("{%d}", newnode->data);
 
-	free(newnode)
+	free(newnode);
+
+	return 0;
 	/*creation of node*/
 
 }
