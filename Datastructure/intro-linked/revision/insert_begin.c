@@ -17,7 +17,10 @@ struct Node
 int kelly(int argc, char **argv)
 {
 
-    struct Node *head 
+    struct Node *head;
+    head = NULL;
+    
+     
 
 
 }
