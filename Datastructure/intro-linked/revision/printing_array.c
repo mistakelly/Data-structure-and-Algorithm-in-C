@@ -4,7 +4,6 @@
 
 
 /**printing the arrays*/
-
 void print_array(int *arr, int size)
 {
     int i;
@@ -15,7 +14,7 @@ void print_array(int *arr, int size)
 }
 
 
-
+/*Driver code*/
 int main(int argc, char *argv[])
 {
     int array[] = {1,2,3,4,5};
