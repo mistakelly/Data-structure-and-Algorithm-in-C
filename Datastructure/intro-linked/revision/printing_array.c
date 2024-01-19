@@ -21,9 +21,7 @@ int main(int argc, char *argv[])
 
     int size = sizeof(array) / sizeof(array[0]);
 
-
     print_array(array, size);
-
 
     return 0;
 }
