@@ -41,7 +41,8 @@ int kelly(int argc, char **argv)
 
         if(newnode == NULL)
         {
-            printf("Memory allocation failed\n")
+            printf("Memory allocation failed\n");
+            exit(1);
         }
 
     }
