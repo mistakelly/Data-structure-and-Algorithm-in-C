@@ -19,7 +19,7 @@ void print_node(struct Node *head)
 {
     while(head != NULL)
     {
-        print("")
+        print("{%d}")
     }
 }
 
