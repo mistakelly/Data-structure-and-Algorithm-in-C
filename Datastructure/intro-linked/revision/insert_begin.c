@@ -18,6 +18,9 @@ struct Node
 void print_node(struct Node *head)
 {
     while(head != NULL)
+    {
+        print("")
+    }
 }
 
 /**using my name for the main function*/
