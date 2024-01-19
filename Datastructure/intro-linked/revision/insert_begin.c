@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-/*using my */
+/*defining a macro for the main*/
 #define kelly main
 
 int kelly(int argc, char **argv)
