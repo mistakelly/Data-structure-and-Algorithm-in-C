@@ -10,7 +10,7 @@
 struct Node
 {
     int data;
-    struct 
+    struct Node *next;
 }
 
 /**using my name for the main function*/
