@@ -17,7 +17,7 @@ struct Node
 int kelly(int argc, char **argv)
 {
 
-    struct Node 
+    struct Node *head 
 
 
 }
