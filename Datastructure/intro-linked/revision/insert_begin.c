@@ -7,7 +7,11 @@
 
 /*define a structure*/
 
-struct Node 
+struct Node
+{
+    int data;
+    struct 
+}
 
 /**using my name for the main function*/
 int kelly(int argc, char **argv)
