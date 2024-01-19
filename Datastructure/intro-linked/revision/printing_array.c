@@ -8,7 +8,7 @@
 void print_array(int *arr, int size)
 {
     int i;
-    for(i = 0; i )
+    for(i = 0; i < size; i++)
 }
 
 
