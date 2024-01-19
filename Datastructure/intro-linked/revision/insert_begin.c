@@ -15,7 +15,7 @@ struct Node
 
 /*printing the list*/
 
-void print_node()
+void print_node(struct Node *head)
 
 /**using my name for the main function*/
 int kelly(int argc, char **argv)
@@ -25,7 +25,7 @@ int kelly(int argc, char **argv)
     head = NULL;
 
     int array[] = {1,2,3,4,5}; 
-    
+
 
 
 }
