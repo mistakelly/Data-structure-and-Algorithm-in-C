@@ -11,12 +11,13 @@ struct Node
 {
     int data;
     struct Node *next;
-}
+};
 
 /**using my name for the main function*/
 int kelly(int argc, char **argv)
 {
 
+    struct Node 
 
 
 }
