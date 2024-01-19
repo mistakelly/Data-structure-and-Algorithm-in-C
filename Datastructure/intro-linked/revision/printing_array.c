@@ -5,7 +5,10 @@
 
 /**printing the arrays*/
 
-void print_array(int *arr, int )
+void print_array(int *arr, int size)
+{
+    for 
+}
 
 
 
