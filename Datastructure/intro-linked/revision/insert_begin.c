@@ -37,7 +37,7 @@ int kelly(int argc, char **argv)
     {
         /**allocate memory for the Nodes*/
 
-        struct Node *n
+        struct Node *new
 
     }
 
