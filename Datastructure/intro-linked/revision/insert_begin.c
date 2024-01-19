@@ -36,5 +36,6 @@ int kelly(int argc, char **argv)
 
     print_node(head);
 
+    return 0;
 
 }
