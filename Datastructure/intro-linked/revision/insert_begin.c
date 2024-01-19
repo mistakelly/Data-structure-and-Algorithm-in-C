@@ -19,7 +19,8 @@ void print_node(struct Node *head)
 {
     while(head != NULL)
     {
-        print("{%d}", head->data)
+        print("{%d}", head->data);
+        head = head -> next;
     }
 }
 
