@@ -1,2 +1,6 @@
 #include <stdio.h>
-#inc
+#include <stdlib.h>
+
+
+
+int main(int argc, int)
