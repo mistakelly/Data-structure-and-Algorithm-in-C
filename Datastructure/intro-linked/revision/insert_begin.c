@@ -20,7 +20,7 @@ int kelly(int argc, char **argv)
     struct Node *head;
     head = NULL;
 
-    int array[] = {5} 
+    int array[] = {1,2,3,4,5}; 
 
 
 }
