@@ -39,6 +39,11 @@ int kelly(int argc, char **argv)
 
         struct Node *newnode = (struct Node *)malloc(sizeof(struct Node));
 
+        if(newnode == NULL)
+        {
+            printf("")
+        }
+
     }
 
 
