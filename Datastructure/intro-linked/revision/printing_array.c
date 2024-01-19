@@ -5,5 +5,5 @@
 
 int main(int argc, char *argv[])
 {
-    int arrray = 
+    int arrray = {1,2,3,4,5};
 }
