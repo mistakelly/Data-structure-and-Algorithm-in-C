@@ -3,4 +3,4 @@
 #include <stdlib.h>
 
 
-int kelly()
+int kelly(int argc, char)
