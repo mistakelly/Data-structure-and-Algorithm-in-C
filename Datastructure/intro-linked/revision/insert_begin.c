@@ -17,7 +17,7 @@ struct Node
 
 void print_node(struct Node *head)
 {
-    
+    while(head != NULL)
 }
 
 /**using my name for the main function*/
