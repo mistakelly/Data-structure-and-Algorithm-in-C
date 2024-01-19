@@ -3,4 +3,4 @@
 
 
 
-int main(int argc, int)
+int main(int argc, char *argv)
