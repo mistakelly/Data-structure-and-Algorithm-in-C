@@ -37,11 +37,7 @@ int kelly(int argc, char **argv)
     {
         /**allocate memory for the Nodes*/
 
-        struct Node *newnode = (struct Node *)malloc(sizeof(struct insert_begin
-        {
-            /* data */
-        };
-        ))
+        struct Node *newnode = (struct Node *)malloc(sizeof(struct Node))
 
     }
 
