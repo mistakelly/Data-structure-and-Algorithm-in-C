@@ -3,7 +3,9 @@
 #include <string.h>
 
 
-/
+/**printing the arrays*/
+
+void 
 
 
 
