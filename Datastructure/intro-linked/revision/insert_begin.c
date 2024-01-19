@@ -35,7 +35,8 @@ int kelly(int argc, char **argv)
 
     for(int i = 0; i < sizeof(array) / sizeof(array[0]); i++)
     {
-        /**al*/
+        /**allocate memory for the array*/
+        
     }
 
 
