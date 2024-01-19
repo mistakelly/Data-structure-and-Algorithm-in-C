@@ -33,7 +33,7 @@ int kelly(int argc, char **argv)
 
     int array[] = {1,2,3,4,5}; 
 
-    for()
+    for(int i = 0; i < size)
 
 
     print_node(head);
