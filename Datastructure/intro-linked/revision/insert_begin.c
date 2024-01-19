@@ -13,7 +13,9 @@ struct Node
     struct Node *next;
 };
 
-/**/
+/*printing the list*/
+
+
 
 /**using my name for the main function*/
 int kelly(int argc, char **argv)
