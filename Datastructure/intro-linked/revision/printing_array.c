@@ -5,7 +5,7 @@
 
 /**printing the arrays*/
 
-void print_array()
+void print_array(int *arr)
 
 
 
