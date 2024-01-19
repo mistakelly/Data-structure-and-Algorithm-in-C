@@ -16,6 +16,9 @@ struct Node
 /*printing the list*/
 
 void print_node(struct Node *head)
+{
+    
+}
 
 /**using my name for the main function*/
 int kelly(int argc, char **argv)
