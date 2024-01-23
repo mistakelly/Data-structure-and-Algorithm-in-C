@@ -1,3 +1,3 @@
 #include <stdio.h>
 
-define 
+define Mistar
