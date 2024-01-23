@@ -19,5 +19,5 @@ int kelly(void)
 
     /*create a node*/
 
-    struct Node *
+    struct Node *node1 = 
 }
