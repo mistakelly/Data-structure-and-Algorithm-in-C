@@ -24,10 +24,7 @@ int kelly(void)
     node1->data = 5;
     node1->next = NULL;
 
-    printf("%d", node1->data);
-
-
-
+    printf("%d\n", node1->data);
 
     free(node1);
     return 0;
