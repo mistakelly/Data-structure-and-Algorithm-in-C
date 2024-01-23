@@ -13,5 +13,5 @@ struct Node
 
 int kelly(void)
 {
-    
+    /*define node*/
 }
