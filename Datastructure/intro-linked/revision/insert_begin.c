@@ -3,4 +3,7 @@
 #define kelly main
 
 
-int kelly()
+int kelly(void)
+{
+    
+}
