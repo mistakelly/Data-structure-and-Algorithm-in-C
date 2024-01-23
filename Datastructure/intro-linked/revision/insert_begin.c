@@ -21,6 +21,7 @@ int kelly(void)
 
     struct Node *node1 = (struct Node *)malloc(sizeof(struct Node));
     struct Node *node2 = (struct Node *)malloc(sizeof(struct Node));
+     struct Node *node2 = (struct Node *)malloc(sizeof(struct Node));
 
     node1->data = 5;
     
