@@ -29,7 +29,7 @@ int kelly(void)
     node2->data = 10;
     node2-> next = NULL;
 
-    printf("%d\n", node1->data, node2-);
+    printf("%d\n", node1->data, node2->data);
 
     free(node1);
     return 0;
