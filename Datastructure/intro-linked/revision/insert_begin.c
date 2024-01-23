@@ -4,6 +4,11 @@
 
 /*define node*/
 
+struct Node
+{
+    
+}
+
 
 int kelly(void)
 {
