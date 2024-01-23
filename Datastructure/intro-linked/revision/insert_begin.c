@@ -19,5 +19,8 @@ int kelly(void)
 
     /*create a node*/
 
-    struct Node *node1 = (struct Node *)malloc(sizeof(struct Node))
+    struct Node *node1 = (struct Node *)malloc(sizeof(struct Node));
+
+
+    
 }
