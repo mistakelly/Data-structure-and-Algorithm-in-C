@@ -29,7 +29,8 @@ int kelly(void)
     node2->data = 10;
     node2-> next = NULL;
 
-    node3->data = 
+    node3->data = 15;
+    node3->
 
     printf("%d %d\n", node1->data, node2->data);
 
