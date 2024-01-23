@@ -13,5 +13,7 @@ struct Node
 
 int kelly(void)
 {
-    /*define head node*/
+    /*define head pointer*/
+
+    struct N
 }
