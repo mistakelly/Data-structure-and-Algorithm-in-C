@@ -23,6 +23,7 @@ int kelly(void)
     struct Node *node2 = (struct Node *)malloc(sizeof(struct Node));
 
     node1->data = 5;
+    
     node1->next = NULL;
 
     printf("%d\n", node1->data);
