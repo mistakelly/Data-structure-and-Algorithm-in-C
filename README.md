@@ -1,4 +1,4 @@
-# Linked List Implementations in C
+## Linked List Implementations in C
 
 This repository contains different types of linked list implementations in C programming language. Linked lists are a fundamental data structure used in computer science to organize and manipulate a collection of elements.
 
