@@ -13,20 +13,16 @@ int count_nodes(struct Node *head)
 {
 
     struct Node* current = NULL;
-    current = head;
-
-
+    // current = head;
 
     int count = 0;
-
-
-    while (current != NULL)
+    while (head != NULL)
     {
         /* code */
+        printf("address of head <%p>\n", head);
         count++;
-        current = current -> next;
+        head = head -> next;
     }    
-
     return count;
 }
 
@@ -38,12 +34,6 @@ int main(int argc, char *argv[])
     struct Node* node2 = NULL;
     struct Node* node3 = NULL;
     struct Node* node4 = NULL;
-
-
-
-   
-   
-
     
     // create list and allocate memory.
      node1 = (struct Node*)malloc(sizeof(struct Node));
@@ -71,6 +61,21 @@ int main(int argc, char *argv[])
      printf("%d\n", node2->data);
      printf("%d\n", node3->data);
      printf("%d\n", node4->data);
+     
+     int i = 1;
+
+     while (head != NULL)
+     {
+        /* code */
+
+        printf("address of the node {%d} elem {%d} <%p>\n",  i, head->data, &head->data);
+        head = head->next;
+        i++;
+     }
+     
+
+    // printf("address of head <%p>\n", head);
+     
      printf("sizeof nodes <%d>\n", count);
 
      free(node1);
