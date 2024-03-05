@@ -72,6 +72,8 @@ int main(int argc, char *argv[])
         head = head->next;
         i++;
      }
+
+     printf("address of head itself after printing <%p>\n", &head);
      
 
     // printf("address of head <%p>\n", head);
