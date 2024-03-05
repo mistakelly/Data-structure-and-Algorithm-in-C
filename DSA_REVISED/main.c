@@ -13,15 +13,15 @@ int count_nodes(struct Node *head)
 {
 
     struct Node* current = NULL;
-    // current = head;
+    current = head;
 
     int count = 0;
-    while (head != NULL)
+    while (current != NULL)
     {
         /* code */
-        printf("address of head <%p>\n", head);
+        printf("address of head from function <%p>\n", current);
         count++;
-        head = head -> next;
+        current = current -> next;
     }    
     return count;
 }
@@ -34,6 +34,8 @@ int main(int argc, char *argv[])
     struct Node* node2 = NULL;
     struct Node* node3 = NULL;
     struct Node* node4 = NULL;
+    struct Node* current = NULL;
+ 
     
     // create list and allocate memory.
      node1 = (struct Node*)malloc(sizeof(struct Node));
@@ -42,9 +44,11 @@ int main(int argc, char *argv[])
      node4 = (struct Node*)malloc(sizeof(struct Node));
 
     head = node1;
-    
+    printf("address of node1 initially <%p>\n", node1);
+
     
      node1->data = 5;
+    printf("address of head initially from main <%d>\n", head->data);
      node1->next = node2;
 
      node2->data = 10;
@@ -64,19 +68,21 @@ int main(int argc, char *argv[])
      
      int i = 1;
 
-     while (head != NULL)
+     
+    current = head;
+     while (current != NULL)
      {
         /* code */
 
-        printf("address of the node {%d} elem {%d} <%p>\n",  i, head->data, &head->data);
+        printf("address of the node {%d} elem {%d} <%p>\n",  i, current->data, &current->data);
         // printf("address of head itself after printing <%p>\n", head);
-        head = head->next;
+        current = current->next;
         i++;
      }
+        printf("address of head itself after printing <%p>\n", head);
 
+    printf("address of head after printing from main <%d>\n", head->data);
 
-     printf("address of head itself after printing <%p>\n", &head);
-     
 
     // printf("address of head <%p>\n", head);
      
