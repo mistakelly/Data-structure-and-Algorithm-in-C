@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
      node4 = (struct Node*)malloc(sizeof(struct Node));
 
     head = node1;
-    int count = count_nodes(head);
+    
     
      node1->data = 5;
      node1->next = node2;
@@ -65,6 +65,7 @@ int main(int argc, char *argv[])
 
      node4->data = 20;
      node4->next = NULL;
+    int count = count_nodes(head);
 
      printf("%d\n", node1->data);
      printf("%d\n", node2->data);
