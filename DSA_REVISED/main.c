@@ -59,7 +59,6 @@ int main(int argc, char *argv[])
 
      node4->data = 20;
      node4->next = NULL;
-    int count = count_nodes(head);
 
      printf("%d\n", node1->data);
      printf("%d\n", node2->data);
@@ -70,15 +69,17 @@ int main(int argc, char *argv[])
 
      
     current = head;
-     while (current != NULL)
+     while (head != NULL)
      {
         /* code */
 
         printf("address of the node {%d} elem {%d} <%p>\n",  i, current->data, &current->data);
         // printf("address of head itself after printing <%p>\n", head);
-        current = current->next;
+        head = head->next;
         i++;
      }
+    int count = count_nodes(head);
+
         printf("address of head itself after printing <%p>\n", head);
 
     printf("address of head after printing from main <%d>\n", head->data);
