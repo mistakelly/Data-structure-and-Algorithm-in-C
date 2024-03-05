@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * @brief learn't how the head pointer works.
+ * 
+ */
+
 struct Node
 {
     /* data */
@@ -80,7 +85,7 @@ int main(int argc, char *argv[])
      }
     int count = count_nodes(head);
 
-        printf("address of head itself after printing <%p>\n", head);
+    printf("address of head itself after printing <%p>\n", head);
 
     printf("address of head after printing from main <%d>\n", head->data);
 
@@ -95,4 +100,7 @@ int main(int argc, char *argv[])
      free(node4);
 
     return 0;
+
+
+    int *ptr = malloc(sizeof(int));
 }
