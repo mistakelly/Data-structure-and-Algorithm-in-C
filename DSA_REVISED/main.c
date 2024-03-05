@@ -13,10 +13,7 @@ char* func_string(char *string)
 int main(int argc, char *argv[])
 {
 
-    char result[10]  = "kelly";
-    char* receive_result =  func_string(result);
-
-    printf("%s\n", receive_result);
+   s
 
     return 0;
 }
