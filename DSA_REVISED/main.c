@@ -13,18 +13,18 @@ int count_nodes(struct Node *head)
 {
 
     struct Node* current = NULL;
-    // current = *head;
+    current = head;
 
 
 
     int count = 0;
 
 
-    while (head != NULL)
+    while (current != NULL)
     {
         /* code */
         count++;
-        head = head -> next;
+        current = current -> next;
     }    
 
     return count;
