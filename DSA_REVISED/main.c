@@ -12,16 +12,16 @@ struct Node
 int count_nodes(struct Node *head)
 {
 
-    struct Node* current = NULL;
-    current = head;
+    // struct Node* current = NULL;
+    // current = head;
 
     int count = 0;
-    while (current != NULL)
+    while (head != NULL)
     {
         /* code */
-        printf("address of head from function <%p>\n", current);
+        printf("address of head from function <%p>\n", head);
         count++;
-        current = current -> next;
+        head = head -> next;
     }    
     return count;
 }
