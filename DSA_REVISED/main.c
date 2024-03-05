@@ -70,11 +70,12 @@ int main(int argc, char *argv[])
      printf("%d\n", node2->data);
      printf("%d\n", node3->data);
      printf("%d\n", node4->data);
-    //  printf("sizeof nodes <%d>\n", count);
-    //  free(node1);
-    //  free(node2);
-    //  free(node3);
-    //  free(node4);
+     printf("sizeof nodes <%d>\n", count);
+
+     free(node1);
+     free(node2);
+     free(node3);
+     free(node4);
 
     return 0;
 }
