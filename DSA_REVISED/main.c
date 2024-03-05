@@ -69,9 +69,11 @@ int main(int argc, char *argv[])
         /* code */
 
         printf("address of the node {%d} elem {%d} <%p>\n",  i, head->data, &head->data);
+        // printf("address of head itself after printing <%p>\n", head);
         head = head->next;
         i++;
      }
+
 
      printf("address of head itself after printing <%p>\n", &head);
      
