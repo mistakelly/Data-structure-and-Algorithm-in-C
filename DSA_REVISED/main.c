@@ -12,7 +12,8 @@ struct Node
 int count_nodes(struct Node *head)
 {
 
-    struct Node* current = head;
+    struct Node* current = NULL;
+    current = head;
 
     int count = 0;
 
@@ -25,7 +26,6 @@ int count_nodes(struct Node *head)
     }    
 
     return count;
-    
 }
 
 int main(int argc, char *argv[])
