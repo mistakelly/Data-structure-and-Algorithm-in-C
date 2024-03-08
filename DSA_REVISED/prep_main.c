@@ -15,12 +15,26 @@ void print_list(node *head)
 
     while (head != NULL)
     {
-        /* code */g
+        /* code */
         printf("link->%d ", head->data);
         head = head->next;
     }
     printf("\n");
-    
+}
+
+void free_mem(node *head)
+{
+    node *tmp = NULL;
+    while (head != NULL)
+    {
+        /* code */
+
+        /*set head to tmp so we can alway free the firstnode*/
+        tmp = head;
+        head = head->next;
+        free(tmp);
+
+    }
 }
 
 /*Driver code*/
@@ -38,7 +52,7 @@ int main(int argc, char *argv[])
 
     first_node->data = 5;
     first_node->next = second_node;
-
+    g
     second_node->data = 10;
     second_node->next = third_node;
 
@@ -48,10 +62,8 @@ int main(int argc, char *argv[])
 
     /*print list*/
     print_list(head);
-  
-  
-    free(first_node);
-    free(second_node);
-    free(third_node);
+
+    /*free head*/
+    free_mem(head);
     return 0;
 }
