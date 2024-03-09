@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
     int arr[] = {1, 2, 3, 4, 5};
     int n = sizeof(arr) / sizeof(arr[0]);
 
-    struct Node node[n];
+    struct Node node[5];
 
     for (size_t i = 0; i < 5; i++)
     {
