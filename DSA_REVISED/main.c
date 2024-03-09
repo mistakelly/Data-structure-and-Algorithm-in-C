@@ -85,10 +85,6 @@ int main(int argc, char *argv[])
      }
     int count = count_nodes(head);
 
-    printf("address of head itself after printing <%p>\n", head);
-
-    printf("address of head after printing from main <%d>\n", head->data);
-
 
     // printf("address of head <%p>\n", head);
      
